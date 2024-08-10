@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            guess a number
+        </title>
+        <style>
+            body {
+    background-image: url(https://t4.ftcdn.net/jpg/06/33/72/77/360_F_633727780_VpMujodJT6VoAvmXC2x3MYuilq3npCy9.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+}
+h2 {
+    background-color: blue;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+        </style>
+    </head>
+    <body>
+        <h2> Guess the Number Game! </h2>
+        <h1> Guess a number between 1 and 10: </h1>
+        <input type="number" id="guess"/>
+        <button onclick="b()"> Submit Guess </button>
+        <p id="a"></p>
+        <script>
+            function b() {
+            var g = document.getElementById("guess").value
+            var number = Math.floor(Math.random()*10)
+            if (g > number) {
+                document.getElementById("a").innerHTML = "Oops, your guess is too high... Guess again!"
+            } else if (g < number) {
+                document.getElementById("a").innerHTML = "Oops, your guess is too low... Guess again!"
+            } else document.getElementById("a").innerHTML = "Your guess is correct! You win!"
+            }
+        </script>
+    </body>
+</html>
